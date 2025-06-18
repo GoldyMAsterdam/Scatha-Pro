@@ -134,18 +134,18 @@ public class ScathaProGameplayListeners extends ScathaProListener
         if (event.worm.isScatha)
         {
             Alert.scathaSpawn.play();
+            TextUtil.sendModChatMessage("Scatha-Pro: Scatha spawned");
             WormStatsType.addScathaSpawn();
             scathaPro.getAchievementLogicManager().updateScathaSpawnAchievements(now, event.worm);
-            
             if (scathaPro.isScappaModeActive())
             {
                 event.worm.playScappaSound();
             }
         }
-        // Regular worm spawn
         else
         {
             Alert.regularWormSpawn.play();
+            TextUtil.sendModChatMessage("Scatha-Pro: Worm spawned");
             WormStatsType.addRegularWormSpawn();
         }
         
