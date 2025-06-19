@@ -50,10 +50,10 @@ public class ScathaProGameplayListeners extends ScathaProListener
         TextUtil.sendModChatMessage("Scatha-Pro: Pre-spawn detected");
         scathaPro.variables.startWormSpawnCooldown(true);
         Alert.wormPrespawn.play();
-        
+
+        TextUtil.sendModChatMessage("Worm about to spawn...");
         scathaPro.getAchievementLogicManager().handleAnomalousDesireRecoverAchievement();
     }
-    
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onWormSpawn(WormSpawnEvent event)
     {
