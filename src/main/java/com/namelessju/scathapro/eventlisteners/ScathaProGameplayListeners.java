@@ -47,6 +47,7 @@ public class ScathaProGameplayListeners extends ScathaProListener
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onWormPreSpawn(WormPreSpawnEvent event)
     {
+        TextUtil.sendModChatMessage("Scatha-Pro: Pre-spawn detected");
         scathaPro.variables.startWormSpawnCooldown(true);
         Alert.wormPrespawn.play();
         
