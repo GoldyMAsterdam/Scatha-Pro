@@ -271,8 +271,12 @@ public class ScathaProGameplayListeners extends ScathaProListener
     public void onWormDespawn(WormDespawnEvent event)
     {
         Achievement.worm_despawn.unlock();
+            if (event.worm.isScatha) {
+                TextUtil.sendModChatMessage(EnumChatFormatting.LIGHT_PURPLE + "A Scatha despawned!");
+            } else {
+            TextUtil.sendModChatMessage(EnumChatFormatting.YELLOW + "A Worm despawned!");
+            }
     }
-
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onScathaPetDrop(ScathaPetDropEvent event)
     {
