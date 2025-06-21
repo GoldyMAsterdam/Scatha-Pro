@@ -225,6 +225,7 @@ public class ScathaProGameplayListeners extends ScathaProListener
             scathaPro.getOverlay().updateScathaKills();
             scathaPro.getOverlay().updateScathaKillsSinceLastDrop();
             scathaPro.getPersistentData().updateScathaFarmingStreak(true);
+            TextUtil.sendModChatMessage(EnumChatFormatting.LIGHT_PURPLE + "You killed a Scatha!");
             
             
             if (!scathaPro.variables.scappaModeUnlocked)
@@ -252,6 +253,7 @@ public class ScathaProGameplayListeners extends ScathaProListener
             if (worm.getHitWeaponsCount() >= Achievement.kill_weapons_regular_worm.goal) Achievement.kill_weapons_regular_worm.unlock();
             
             scathaPro.getOverlay().updateWormKills();
+            TextUtil.sendModChatMessage(EnumChatFormatting.YELLOW + "You killed a Worm!");
         }
 
         scathaPro.getPersistentData().saveWormKills();
